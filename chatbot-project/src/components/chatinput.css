@@ -1,0 +1,25 @@
+.input-in {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border-width: 1px;
+    font-size: 15px;
+    flex-grow: 1;
+    border-color: black;
+}
+
+.send-button {
+    background-color: rgb(25, 135, 84);
+    border-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    margin-left: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
