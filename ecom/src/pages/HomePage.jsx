@@ -1,16 +1,12 @@
-
+import { Header } from '../components/Header';
 import'./HomePage.css';
-import { Header } from '../components/header';
+
 
 export function HomePage(){
     return(
      
      <>
-      <title>Ecommerce</title>
-      
-
-      
-      
+     <Header />  
 
        <div className="home-page">
       <div className="products-grid">
