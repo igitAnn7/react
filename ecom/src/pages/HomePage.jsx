@@ -6,7 +6,7 @@ import { products } from '../../../starting-code/data/products';
 
 
 export function HomePage() {
-  axios.get('http://localhost:3000/api/products')
+  axios.get('http://localhost:3000/api/products')  //axios is a cleaner way to make request to the backend for geetting data
   .then((response) => {
     console.log(response.data);
   })
