@@ -10,14 +10,16 @@ export function HomePage() {
   const [cart,setCart] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/products')  //axios is a cleaner way to make request to the backend for geetting data
+    axios.get('/api/products')  
+    //axios is a cleaner way to make request to the backend for geetting data
       .then((response) => {
-        setProducts(response.data);//setproducts save the data in the array and genertes the product html
+        setProducts(response.data);
+        //setproducts save the data in the array and genertes the product html
       })
 
-      axios.get('http://localhost:3000/api/cart-items')
+      axios.get('/api/cart-items')
        .then((response) => {
-        setCart(response.data);//setproducts save the data in the array and genertes the product html
+        setCart(response.data);
       })
 
 
