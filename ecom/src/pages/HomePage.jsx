@@ -7,19 +7,29 @@ import { useEffect,useState } from 'react';
 
 export function HomePage() {
   const [products,setProducts] = useState([]);
+  const [cart,setCart] = useState([]);
 
   useEffect(() => {
     axios.get('http://localhost:3000/api/products')  //axios is a cleaner way to make request to the backend for geetting data
       .then((response) => {
         setProducts(response.data);//setproducts save the data in the array and genertes the product html
       })
-  },[])   //useeffect is created to ensure that data is only fetched once from the backend whner the site reloads, [] only runs once after componnet is created
+
+      axios.get('http://localhost:3000/api/cart-items')
+       .then((response) => {
+        setCart(response.data);//setproducts save the data in the array and genertes the product html
+      })
+
+
+
+  },[])  
+   //useeffect is created to ensure that data is only fetched once from the backend whner the site reloads, [] only runs once after componnet is created
 
 
   return (
 
     <>
-      <Header />
+      <Header  cart={cart}/>
 
       <div className="home-page">
         {products.map((product) => {
